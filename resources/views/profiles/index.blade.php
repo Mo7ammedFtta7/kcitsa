@@ -46,7 +46,7 @@
         <div class="box box-primary">
             <div class="box-body">
                 <div class="row">
-                    {!! Form::model($profiles, ['route' => ['profiles.update', $profiles->id], 'method' => 'patch']) !!}
+                    {!! Form::model($profiles, ['route' => ['profiles.update', $profiles->id], 'method' => 'patch', 'enctype' => 'multipart/form-data']) !!}
  
 
                             <div class="row">
@@ -57,7 +57,7 @@
                         <div class="form-group  ">
                                 <div class="team_detail_inner">
 
-                                        <img src="http://www.themesindustry.com/html/arone/images/team-1.jpg" alt="team_img">
+                                        <img src="/imgs/{!! $profiles->img !!}" alt="team_img">
     
                                     </div>
                                 {!! Form::label('img', 'Img:') !!}

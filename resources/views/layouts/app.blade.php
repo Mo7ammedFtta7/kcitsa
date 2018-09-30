@@ -101,7 +101,7 @@
     <link href="imgs/favicon.png" rel="icon">
 
     <!-- Page Title(Name)-->
-    <title>Astick - Home</title>
+    <title>Astick</title>
 
     <!-- Bootstrap CSS File -->
     <link rel="stylesheet" href="../css/bootstrap.css">
@@ -204,14 +204,15 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse navbar-ex1-collapse  ">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="active"><a href="/home#home" >Home</a></li>
-                            <li><a href="#Advertisers" class="scroll">Advertisers</a></li>
-                            <li><a href="#Drivers" class="scroll">Drivers</a></li>
+                            <li class="active"><a href="{{ Request::is('home*')==false ? '/home' : '' }}#home" >Home</a></li>
+                            <li><a href="{{ Request::is('home*')==false ? '/home' : '' }}#Advertisers" class="{{ Request::is('home*') ? 'scroll' : '' }}">Advertisers</a></li>
+                            <li><a href="{{ Request::is('home*')==false ? '/home' : '' }}#Drivers" class="{{ Request::is('home*') ? 'scroll' : '' }}">Drivers</a></li>
                             <li><a href="{!! route('jobs.index') !!}" >Jobs</a></li>
-                            <li><a href="#About" class="scroll">About</a></li>
+                            <li><a href="{{ Request::is('home*')==false ? '/home' : '' }}#About" class="{{ Request::is('home*') ? 'scroll' : '' }}">About</a></li>
 
                             {{-- <li><a href="#blog" class="scroll">Blog</a></li> --}}
-                            <li><a href="#contact-form" class="scroll">Contact Us</a></li>
+                            
+                            <li><a href="{{ Request::is('home*')==false ? '/home' : '' }}#contact-form" class="{{ Request::is('home*') ? 'scroll' : '' }}">Contact Us</a></li>
                             @guest
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="modal" data-target="#login" href="#">{{ __('Login') }}</a>
@@ -228,8 +229,16 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{!! route('profiles.index') !!}">
-                                                Profile
+                                    <a class="dropdown-item" href="{!! route('profiles.index') !!}">
+                                        Profile
+                                      </a>  
+                                      <br>
+                                    <a class="dropdown-item" href="{!! route('vehicles.index') !!}">
+                                                My vehicles
+                                              </a>
+                                              <br>
+                                              <a class="dropdown-item" href="{!! route('myjobs.index') !!}">
+                                                My Jobs
                                               </a>
                                               <br>
                                     <a class="dropdown-item" href="{{ route('logout') }}"

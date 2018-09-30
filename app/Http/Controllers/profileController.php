@@ -20,6 +20,8 @@ class profileController extends AppBaseController
     public function __construct(profileRepository $profileRepo)
     {
         $this->profileRepository = $profileRepo;
+            $this->middleware('auth');
+
     }
 
     /**
@@ -125,14 +127,37 @@ class profileController extends AppBaseController
     public function update($id, UpdateprofileRequest $request)
     {
         $profile = $this->profileRepository->findWithoutFail($id);
+        $input = $request->all();
 
         if (empty($profile)) {
             Flash::error('Profile not found');
 
             return redirect(route('profiles.index'));
         }
+        if ($request->hasFile('img')) {
+            if($request->file('img')->isValid()) {
+                try {
 
-        $profile = $this->profileRepository->update($request->all(), $id);
+
+                    $photoName = time().'.'.$request->img->getClientOriginalExtension();
+                $input['img'] =  $photoName;
+              //  dd($photoName);
+                $request->img->move(public_path('imgs'), $photoName);
+
+
+                    // $file = $request->file('img');
+                    // $name = rand(11111, 99999) . '.' . $file->getClientOriginalExtension();
+        
+                    # save to DB
+                   // $tickes = Users::create(['imagePath' => 'storage/'.$name]);
+        
+                    // $request->file('img')->move("storage", $name);
+                } catch (Illuminate\Filesystem\FileNotFoundException $e) {
+        
+                }
+            }
+        }
+        $profile = $this->profileRepository->update( $input, $id);
 
         Flash::success('Profile updated successfully.');
 

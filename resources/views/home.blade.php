@@ -111,7 +111,7 @@
 
                                 <div class="icons_div_small">
 
-                                    <p class="small_heading_navy raleway font_400"> <i class="fa fa-comment-o pink_color" aria-hidden="true"></i></p>
+                                    <p class="small_heading_navy raleway font_400"> <i class="fa fa-car pink_color" aria-hidden="true"></i></p>
 
                                     <p class="default_text default_text_light open_sans">
 
@@ -127,7 +127,7 @@
 
                                 <div class="icons_div_small">
 
-                                    <p class="small_heading_navy raleway font_400"> <i class="fa fa-file-code-o pink_color" aria-hidden="true"></i></p>
+                                    <p class="small_heading_navy raleway font_400"> <i class="fa fa-taxi pink_color" aria-hidden="true"></i></p>
 
                                     <p class="default_text default_text_light open_sans">
 

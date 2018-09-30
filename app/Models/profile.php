@@ -80,7 +80,7 @@ class profile extends Model
      * @var array
      */
     public static $rules = [
-        
+        'img'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
     ];
 
     

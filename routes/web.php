@@ -37,3 +37,7 @@ Route::resource('quotes', 'quotesController');
 Route::resource('quotes', 'quotesController');
 
 Route::resource('profiles', 'profileController');
+
+Route::resource('vehicles', 'vehiclesController');
+
+Route::resource('myjobs', 'myjobsController');

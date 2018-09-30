@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
+use Illuminate\Support\Facades\Auth;
+use  App\Models as db;
 
 class jobsController extends AppBaseController
 {
@@ -74,14 +76,14 @@ class jobsController extends AppBaseController
     public function show($id)
     {
         $jobs = $this->jobsRepository->findWithoutFail($id);
-
+        $vehicles =db\vehicles::all()->where('user',Auth::user()->id)->where('status',3);
         if (empty($jobs)) {
             Flash::error('Jobs not found');
 
             return redirect(route('jobs.index'));
         }
 
-        return view('jobs.show')->with('jobs', $jobs);
+        return view('jobs.show')->with('jobs', $jobs)->with('vehicles', $vehicles);
     }
 
     /**

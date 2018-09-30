@@ -14,3 +14,11 @@
     <a href="{!! route('profiles.index') !!}"><i class="fa fa-edit"></i><span>Profiles</span></a>
 </li>
 
+<li class="{{ Request::is('vehicles*') ? 'active' : '' }}">
+    <a href="{!! route('vehicles.index') !!}"><i class="fa fa-edit"></i><span>Vehicles</span></a>
+</li>
+
+<li class="{{ Request::is('myjobs*') ? 'active' : '' }}">
+    <a href="{!! route('myjobs.index') !!}"><i class="fa fa-edit"></i><span>Myjobs</span></a>
+</li>
+
