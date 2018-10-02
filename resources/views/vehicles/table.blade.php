@@ -1,4 +1,4 @@
-<table class="table table-responsive" id="vehicles-table">
+<table class="table table-responsive table-bordered table-striped" id="vehicles-table">
     <thead>
         <tr>
         <th>Vehicle brand</th>

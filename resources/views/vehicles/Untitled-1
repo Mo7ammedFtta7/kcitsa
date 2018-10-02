@@ -1,0 +1,62 @@
+             @foreach($jobs as $jobs)
+
+                    <div class="col-sm-6">
+
+                        <div class="pricing_table_column wow slideInRight" style="visibility: visible; animation-name: slideInRight;">
+
+
+                            <div class="pricee">
+
+                                <div class="row">
+                                        <div class="col-xs-2">
+                                        <img src="/imgs/logos/{!! $jobs->clients->icon !!}" alt="" style="max-width: 40px;max-height: 50px;">        
+                                            </div>
+                                    
+                                    <div class="col-xs-6">
+<br>
+                                        <p>{!! $jobs->clients->name !!}</p>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <br>
+                                            {!! $jobs->jopname !!}
+                                    </div>
+
+                          
+
+                                </div>
+
+
+                            <div class="packages">
+
+                                    <div class="blog_img">
+
+                                            <img src="/imgs/jobsmain/{!! $jobs->img !!}" alt="blog_img">
+                
+                                        </div>
+                                    </div>
+<div class="row" >
+    <div class="col-md-2" >
+         Slots: <b>{!! $jobs->slots !!}</b>
+    </div>
+    <div class="col-md-3" >
+            Duration: <b>{!! $jobs->duration !!}</b>
+    </div>
+<div class="col-md-3">
+        <div class="open_sans pink_color">
+            SDG {!! $jobs->price !!}/Month</div>
+
+</div>
+    <div class="col-md-4" >
+            <div class="pricing_button">
+
+                    <a href="#." class="btn btn-info">Learn more</a>
+
+                </div>
+
+    </div>
+
+</div>
+                           
+</div>
+</div>
+@endforeach

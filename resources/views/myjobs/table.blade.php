@@ -1,4 +1,4 @@
-<table class="table table-responsive" id="myjobs-table">
+<table class="table table-responsive table-bordered table-striped" id="myjobs-table">
     <thead>
         <tr>
        
