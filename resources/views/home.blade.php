@@ -3,7 +3,7 @@
 @section('content')
 <style>
 .stats_section {
-    background: url(../imgs/312.jpg);
+    background: url(public/imgs/312.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -37,7 +37,7 @@
                 <!-- SLIDE  -->
                 <li data-index="rs-3" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb="assets/100x50_6072e-slider_slide_3.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="imgs/slider1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                    <img src="public/imgs/slider1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
                     <!-- LAYERS -->
                     <div class="tp-caption tp-resizeme navy_blue text-center" data-x="['left','left','left','left']" data-hoffset="['0','0','0','15']" data-y="['227','227','150','150']" data-voffset="['0','0','0','0']" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on">
                         <h1 class="text-captilize text-center raleway navy_blue swiper-slider-heading" style="text-align: center;">

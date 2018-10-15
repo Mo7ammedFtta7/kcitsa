@@ -14,6 +14,15 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/clear-cache', function() {
+    $exitCode1 = Artisan::call('cache:clear');
+    $exitCode2 = Artisan::call('optimize');
+    $exitCode3 = Artisan::call('route:cache');
+    $exitCode4 = Artisan::call('view:clear');
+    $exitCode5 = Artisan::call('config:cache');
+     return "done!!";
+});
+
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 
